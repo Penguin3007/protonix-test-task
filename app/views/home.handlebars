@@ -1,0 +1,19 @@
+<table id="symbols-table">
+    <tr>
+        <th>Symbol</th>
+        <th>Ask Price</th>
+        <th>Bid Price</th>
+    </tr>
+    {{#each symbols}}
+        <tr class="symbol-item" id="{{this.id}}">
+            <td>
+                {{#if this.isFavorite}}
+                    *
+                {{/if}}
+                {{this.symbol}}
+            </td>
+            <td>{{this.askPrice}}</td>
+            <td>{{this.bidPrice}}</td>
+        </tr>
+    {{/each}}
+</table>
